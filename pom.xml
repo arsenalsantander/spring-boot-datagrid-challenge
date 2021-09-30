@@ -45,12 +45,14 @@
 		<!-- adds the dependency to connect to infinispan / data grid server and spring boot -->
 		<dependency>
 			<groupId>org.infinispan</groupId>
-			<artifactId>infinispan-spring-boot-starter-embedded</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.infinispan</groupId>
 			<artifactId>infinispan-spring-boot-starter-remote</artifactId>
 			<version>${version.infinispan}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<!--version>${version.spring.boot}</version-->
 		</dependency>
 
 	</dependencies>
