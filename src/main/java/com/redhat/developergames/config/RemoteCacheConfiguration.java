@@ -1,18 +1,21 @@
 package com.redhat.developergames.config;
 
 import com.redhat.developergames.model.Weather;
-import org.infinispan.manager.EmbeddedCacheManager;
+import org.infinispan.manager.RemoteCacheManager;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
-public class EmbeddedCacheConfiguration {
-    private final EmbeddedCacheManager cacheManager;
+
+
+
+public class RemoteCacheConfiguration {
+    private final RemoteCacheManager cacheManager;
 
     @Autowired
     private Weather weather;
 
     @Autowired
-    public EmbeddedCacheConfiguration(EmbeddedCacheManager cacheManager) {
+    public RemoteCacheConfiguration(RemoteCacheManager cacheManager) {
         this.cacheManager = cacheManager;
     }
 
