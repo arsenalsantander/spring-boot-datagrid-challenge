@@ -28,6 +28,7 @@ public class WeatherApp {
    }
 
    @GetMapping("/weather/{location}")
+   //@Cacheable(value = "weather")
    public Object getByLocation(@PathVariable String location) {
       Weather weather = weatherRepository.getByLocation(location);
       if (weather == null) {
