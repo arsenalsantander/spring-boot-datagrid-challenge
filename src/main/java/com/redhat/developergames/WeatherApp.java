@@ -11,6 +11,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @SpringBootApplication
@@ -22,8 +24,12 @@ public class WeatherApp {
    @Autowired
    WeatherRepository weatherRepository;
 
+   Logger logger = LoggerFactory.getLogger(WeatherApp.class);
+
    @GetMapping("/")
    public String index() {
+       logger.info("An INFO Message");
+       System.out.println("teeeesttee");
       return "Greetings from Spring Boot with Data Grid!";
    }
 
